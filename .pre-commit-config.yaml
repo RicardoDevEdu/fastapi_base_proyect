@@ -1,12 +1,12 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0  # Usa la última versión disponible
+    rev: v4.4.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
-  - repo: local  # Usa la última versión de Black
+  - repo: local
     hooks:
       - id: black
         name: black

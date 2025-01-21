@@ -1,0 +1,29 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0  # Usa la última versión disponible
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/psf/black
+    rev: 23.9.1  # Usa la última versión de Black
+    hooks:
+      - id: black
+        args: [--line-length=88]  # Ajusta el largo de línea si es necesario
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0  # Usa la última versión de Flake8
+    hooks:
+      - id: flake8
+        args: [--max-line-length=88]  # Ajusta el largo de línea si es necesario
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.5.1  # Usa la última versión de MyPy
+    hooks:
+      - id: mypy
+
+  - repo: https://github.com/pre-commit/mirrors-pytest
+    rev: v3.0.0  # Usa la última versión de pytest hook
+    hooks:
+      - id: pytest

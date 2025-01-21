@@ -15,13 +15,20 @@ repos:
         types: [python]
         args: [./src/]
 
-  - repo: https://github.com/PyCQA/flake8
-    rev: 6.1.0  # Usa la última versión de Flake8
+  - repo: local
     hooks:
       - id: flake8
-        args: [--max-line-length=88]  # Ajusta el largo de línea si es necesario
+        name: flake8
+        entry: ./venv/bin/flake9
+        language: system
+        types: [ python ]
+        args: [ ./src/ ]
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.5.1  # Usa la última versión de MyPy
+  - repo: local
     hooks:
       - id: mypy
+        name: mypy
+        entry: ./venv/bin/mypy
+        language: system
+        types: [ python ]
+        args: [ ./src/ ]

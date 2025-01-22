@@ -32,3 +32,12 @@ repos:
         language: system
         types: [ python ]
         args: [ ./src/ ]
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: ./venv/bin/pytest
+        language: system
+        types: [ python ]
+        args: [ ./src/ ]

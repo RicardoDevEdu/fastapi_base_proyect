@@ -32,13 +32,8 @@ repos:
         args: [ --config-file=mypy.ini ]
         exclude: tests/
         additional_dependencies:
-          - types-cachetools
           - types-requests
           - types-ujson
-          - types-toml
-          - types-click
-          - types-python-jose
-          - pymongo
           - pydantic
           - fastapi
 

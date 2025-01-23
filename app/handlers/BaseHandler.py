@@ -1,2 +1,5 @@
 class BaseHandler:
-    pass
+
+    @classmethod
+    def message(cls):
+        return "handler message"

@@ -3,7 +3,7 @@ from .routes import base
 
 application = FastAPI(
     title="Base API",
-    description="You can use this API.",
+    description="You can use this API. 3",
     version="1.0.0",
 )
 

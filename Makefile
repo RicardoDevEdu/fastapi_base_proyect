@@ -1,7 +1,7 @@
 PYTHON=python3
 APP=src.main:app
 ENV=venv
-SOURCE=./src/
+SOURCE=./src
 
 install:
 	pip install -r requirements.txt
@@ -16,10 +16,10 @@ type-check:
 	mypy src/
 
 test:
-	pytest $(SOURCE)/test/
+	pytest ./test/
 
 test-cover:
-	pytest --cov-report html --cov=./ $(SOURCE)/test
+	pytest --cov-report html --cov=./ ./test
 
 run:
 	uvicorn $(APP) --reload

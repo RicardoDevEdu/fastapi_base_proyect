@@ -1,7 +1,7 @@
 PYTHON=python3
-APP=src.main:app
+APP=app.main:app
 ENV=venv
-SOURCE=./src
+SOURCE=./app
 
 install:
 	pip install -r requirements.txt
@@ -13,7 +13,7 @@ lint:
 	flake8 $(SOURCE)
 
 type-check:
-	mypy src/
+	mypy $(SOURCE)
 
 run-test:
 	pytest ./test/

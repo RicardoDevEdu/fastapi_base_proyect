@@ -13,7 +13,7 @@ repos:
         entry: ./venv/bin/black
         language: system
         types: [python]
-        args: [./src/]
+        args: [./app/]
 
   - repo: local
     hooks:
@@ -22,20 +22,25 @@ repos:
         entry: ./venv/bin/flake8
         language: system
         types: [ python ]
-        args: [ ./src/ ]
+        args: [ ./app/ ]
 
-  - repo: local
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.14.1
     hooks:
       - id: mypy
-        name: mypy
-        entry: ./venv/bin/mypy
-        language: system
-        types: [ python ]
-        args: [ ./src/ ]
-        exclude: |
-            (?x)^(
-              ^test_
-            )$
+        name: Type checking
+        args: [ --config-file=mypy.ini ]
+        exclude: tests/
+        additional_dependencies:
+          - types-cachetools
+          - types-requests
+          - types-ujson
+          - types-toml
+          - types-click
+          - types-python-jose
+          - pymongo
+          - pydantic
+          - fastapi
 
   - repo: local
     hooks:

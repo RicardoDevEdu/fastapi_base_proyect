@@ -1,17 +1,20 @@
 from fastapi import FastAPI
+from .routes import base
 
-app = FastAPI(
+application = FastAPI(
     title="Base API",
     description="You can use this API.",
     version="1.0.0",
 )
 
+application.include_router(base.router, prefix="/base", tags=["base"])
 
-@app.get("/")
+
+@application.get("/")
 async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/hello/{name}")
+@application.get("/hello/{name}")
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}

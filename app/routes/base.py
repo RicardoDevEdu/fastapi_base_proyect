@@ -7,4 +7,4 @@ router = APIRouter()
 
 @router.get("/")
 def base():
-    return {"message": BaseHandler.message()}
+    return BaseHandler.message()

@@ -9,3 +9,14 @@ GET http://127.0.0.1:8000/hello/User
 Accept: application/json
 
 ###
+
+GET http://gateway.marvel.com/v1/public/comics?ts=1&apikey=de38123c82535d0f2fd3064033495fc9&hash=b134440b5ecd4909f39883e1d2bc1c2b
+Accept: application/json
+
+###
+
+GET http://gateway.marvel.com/v1/public/comics/15808?ts=1&apikey=de38123c82535d0f2fd3064033495fc9&hash=b134440b5ecd4909f39883e1d2bc1c2b
+
+
+###
+GET http://gateway.marvel.com/v1/public/comics?ts=1&apikey=de38123c82535d0f2fd3064033495fc9&hash=b134440b5ecd4909f39883e1d2bc1c2b&upc=5960605667-00111

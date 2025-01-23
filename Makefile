@@ -1,5 +1,5 @@
 PYTHON=python3
-APP=app.main:app
+APP=app.main:application
 ENV=venv
 SOURCE=./app
 

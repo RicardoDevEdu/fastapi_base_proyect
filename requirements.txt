@@ -4,3 +4,4 @@ flake8==7.1.1
 pre_commit==4.1.0
 mypy==1.14.1
 pytest==8.3.4
+uvicorn==0.34.0

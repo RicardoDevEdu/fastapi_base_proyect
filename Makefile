@@ -15,7 +15,7 @@ lint:
 type-check:
 	mypy src/
 
-test:
+run-test:
 	pytest ./test/
 
 test-cover:
@@ -31,16 +31,17 @@ clean:
 reinstall:
 	pip uninstall -r requirements.txt -y && pip install -r requirements.txt
 
-all: install format lint test run
+all: format lint type-check run-test
 
 # Mostrar ayuda
 help:
 	@echo "Comandos disponibles:"
 	@echo "  install        Instalar dependencias"
-	@echo "  venv           Activar entorno virtual"
 	@echo "  format         Formatear código con Black"
 	@echo "  lint           Verificar calidad del código con Flake8"
-	@echo "  test           Ejecutar pruebas con pytest"
+	@echo "  type-check     Verifica tipos de datos"
+	@echo "  run-test           Ejecutar pruebas con pytest"
+	@echo "  test-cover     Genera un reporte de covertura de test"
 	@echo "  run            Ejecutar el servidor de desarrollo"
 	@echo "  clean          Eliminar archivos temporales"
 	@echo "  reinstall      Reinstalar dependencias"
